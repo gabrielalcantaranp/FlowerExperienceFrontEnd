@@ -51,5 +51,86 @@ Certifique-se de ter os seguintes itens instalados:
 
 ```bash
 git clone https://github.com/gabrielalcantaranp/FlowerExperienceFrontEnd.git
+```
+<h3>Iniciando o Projeto</h3>
+
+```bash
+
+cd FlowerExperienceFrontEnd
+npm install
+npm run dev
+
+```
+
+<h2 id="rotas">📍 Rotas da Aplicação</h2>
+
+| Rota               | Descrição                                      |
+|---------------------|------------------------------------------------|
+| `/authenticate`     | Lista todas as informações do usuário          |
+| `/login`            | Página de login do usuário                     |
+| `/dashboard`        | Página mostrando as compras e despesas do usuário |
+| `/plants`           | Lista todas as plantas disponíveis             |
+| `/subscribe`        | Assina um plano de flores                      |
+| `/subscriptions`    | Mostra todas as assinaturas do usuário         |
+
+<h2 id="colaboradores">🤝 Colaboradores</h2>
+Agradecimentos especiais a todos que contribuíram para este projeto.
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/137437756?v=4" width="100px;" alt="Gabriel Foto"/><br>
+        <sub>
+          <b>Gabriel Alcântara</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/133906286?s=400&u=705a3683274217994743ac18ed7fd56a1140a566&v=4" width="100px;" alt="Elon Musk Foto"/><br>
+        <sub>
+          <b>Breno Souza</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/130807443?v=4" width="100px;" alt="Elon Musk Foto"/><br>
+        <sub>
+          <b>Vitorio Augusto</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/133907386?v=4" width="100px;" alt="Steve Jobs Foto"/><br>
+        <sub>
+          <b>Magnus Oss</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+<td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/94566457?v=4" width="100px;" alt="Elon Musk Foto"/><br>
+        <sub>
+          <b>Guilherme Oliveira</b>
+        </sub>
+      </a>
+    </td>
+
+<h2 id="contribuir">📫 Contribuir</h2>
+
+Passos para contribuir para este projeto:
+
+```
+git clone https://github.com/gabrielalcantaranp/FlowerExperienceFrontEnd.git
+git checkout -b feature/NOME
+
+```
+
+
 
 
