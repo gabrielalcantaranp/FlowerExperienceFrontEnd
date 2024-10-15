@@ -1,18 +1,8 @@
-# Projeto: Flower The Real Experience
+# React + Vite
 
-## Descrição Geral:
-Site de assinatura de plantas, onde o cliente que assinar receberá flores e cuidados especiais para as plantas.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Requisitos Funcionais:
+Currently, two official plugins are available:
 
-### Funcionalidades para Usuário:
-- **RF01**: O Sistema deve permitir que o usuário crie uma conta nova com nome, email e senha.
-- **RF02**: O Sistema deve permitir que o usuário edite as informações da conta.
-- **RF03**: O Sistema deve permitir que o usuário exclua sua conta.
-- **RF04**: O Sistema deve mostrar todas as assinaturas feitas dentro do sistema.
-- **RF05**: O Sistema deve permitir cancelar as assinaturas.
-
-### Funcionalidades para Administrador:
-- **RF06**: O Sistema deve permitir que o administrador crie uma planta nova com nome e descrição.
-- **RF07**: O Sistema deve permitir que o administrador edite as informações da planta.
-- **RF08**: O Sistema deve permitir que o administrador exclua as plantas.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
