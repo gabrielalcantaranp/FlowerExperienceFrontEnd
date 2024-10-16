@@ -13,6 +13,10 @@
  <a href="#contribuir">Contribuir</a>
 </p>
 
+<p align="center">
+    <img src="src/assets/logo-redonda-dark.png" alt="Imagem Exemplo" width="250px">
+</p>
+
 <h2 id="sobre">📌 Sobre</h2>
 
 **Flower The Real Experience** é um site de assinatura onde os usuários podem assinar para receber flores especiais e dicas de cuidados para suas plantas. A plataforma é dividida em dois papéis principais: **Usuários** e **Administradores**, cada um com funcionalidades distintas.
