@@ -4,6 +4,7 @@
 [![React](https://img.shields.io/badge/React-005CFE?style=for-the-badge&logo=react)](https://reactjs.org)
 [![Projeto](https://img.shields.io/badge/📱Visite_este_projeto-000?style=for-the-badge&logo=project)](PROJECT__URL)
 [![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://spring.io)
+[![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com)
 
 <p align="center">
  <a href="#sobre">Sobre</a> • 
@@ -14,7 +15,7 @@
 </p>
 
 <p align="center">
-    <img src="../.github/example.png" alt="Imagem Exemplo" width="400px">
+    <img src="src/assets/logo-redonda-dark.png" alt="Imagem Exemplo" width="250px">
 </p>
 
 <h2 id="sobre">📌 Sobre</h2>
@@ -34,8 +35,6 @@
 - **RF06**: Os administradores podem criar novas plantas especificando um nome e descrição.
 - **RF07**: Os administradores podem editar as informações das plantas.
 - **RF08**: Os administradores podem excluir plantas do sistema.
-
-[![projeto][PROJECT__BADGE]][PROJECT__URL]
 
 <h2 id="como-iniciar">🚀 Como Iniciar</h2>
 
