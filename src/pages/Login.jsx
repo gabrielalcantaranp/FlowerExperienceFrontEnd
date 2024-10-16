@@ -3,31 +3,42 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 import light_logo_red from '../assets/logo-redonda-light.png';
 import dark_logo_red from '../assets/logo-redonda-dark.png';
+import Modal from '../components/Modal/Modal'; 
 
 const Login = ({ theme, setTheme, handleLogin }) => {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
-    const navigate = useNavigate(); 
+    const [modalVisible, setModalVisible] = useState(false);
+    const [modalMessage, setModalMessage] = useState('');
+    const [modalTitle, setModalTitle] = useState(''); 
+    const navigate = useNavigate();
 
     const handleSubmit = () => {
-       
         const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-    
-    
         const usuario = usuarios.find(user => user.email === email);
-    
+
         if (usuario && usuario.senha === senha) {
-            alert("Login realizado com sucesso!");
-            handleLogin(false); 
-            localStorage.setItem('emailLogado', email); 
-            navigate('/usuario'); 
+            setModalTitle("Sucesso");
+            setModalMessage("Login realizado com sucesso!");
+            setModalVisible(true);
+            handleLogin(false);
+            localStorage.setItem('emailLogado', email);
+            navigate('/usuario');
         } else if (email === 'adm@gmail.com' && senha === '123') {
-            alert("Login como administrador realizado com sucesso!");
-            handleLogin(true); 
-            navigate('/'); 
+            setModalTitle("Sucesso");
+            setModalMessage("Login como administrador realizado com sucesso!");
+            setModalVisible(true);
+            handleLogin(true);
+            navigate('/');
         } else {
-            alert("E-mail ou senha incorretos.");
+            setModalTitle("Erro");
+            setModalMessage("E-mail ou senha incorretos.");
+            setModalVisible(true);
         }
+    };
+
+    const closeModal = () => {
+        setModalVisible(false);
     };
 
     return (
@@ -63,6 +74,12 @@ const Login = ({ theme, setTheme, handleLogin }) => {
                     <Link to='/cadastro' className='cad-btn'>Cadastre-se</Link>
                 </div>
             </div>
+            <Modal 
+                isOpen={modalVisible} 
+                onClose={closeModal} 
+                title={modalTitle} 
+                message={modalMessage} 
+            />
         </div>
     );
 };

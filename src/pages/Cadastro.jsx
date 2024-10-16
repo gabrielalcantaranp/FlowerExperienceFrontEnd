@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Cadastro.css';
 import light_logo_red from '../assets/logo-redonda-light.png';
 import dark_logo_red from '../assets/logo-redonda-dark.png';
+import Modal from '../components/Modal/Modal'; 
 
 const Cadastro = ({ theme }) => {
     const [nome, setNome] = useState('');
@@ -10,27 +11,35 @@ const Cadastro = ({ theme }) => {
     const [senha, setSenha] = useState('');
     const [confirmarSenha, setConfirmarSenha] = useState('');
     const [erro, setErro] = useState('');
+    const [modalVisible, setModalVisible] = useState(false);
+    const [modalMessage, setModalMessage] = useState('');
+    const [modalTitle, setModalTitle] = useState('');
     const navigate = useNavigate();
 
     const handleCadastro = (e) => {
         e.preventDefault();
 
         if (senha.length < 8) {
-            setErro('A senha deve ter pelo menos 8 caracteres.');
+            setModalTitle("Erro");
+            setModalMessage("A senha deve ter pelo menos 8 caracteres.");
+            setModalVisible(true);
             return;
         }
 
         if (senha !== confirmarSenha) {
-            setErro('As senhas não coincidem.');
+            setModalTitle("Ops");
+            setModalMessage("As senhas não coincidem.");
+            setModalVisible(true);
             return;
         }
-
 
         const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
         const emailExistente = usuarios.some(user => user.email === email);
 
         if (emailExistente) {
-            setErro('Este e-mail já está cadastrado.');
+            setModalTitle("Ops");
+            setModalMessage("Este e-mail já está cadastrado.");
+            setModalVisible(true);
             return;
         }
 
@@ -42,7 +51,6 @@ const Cadastro = ({ theme }) => {
             pedidos: [] 
         };
 
-       
         usuarios.push(usuario);
         localStorage.setItem('usuarios', JSON.stringify(usuarios)); 
 
@@ -52,9 +60,17 @@ const Cadastro = ({ theme }) => {
         setConfirmarSenha('');
         setErro('');
 
-        alert('Cadastro realizado com sucesso!');
+        setModalTitle("Sucesso");
+        setModalMessage("Cadastro realizado com sucesso!");
+        setModalVisible(true);
 
-        navigate('/login');
+        setTimeout(() => {
+            navigate('/login');
+        }, 2000);
+    };
+
+    const closeModal = () => {
+        setModalVisible(false);
     };
 
     return (
@@ -112,9 +128,14 @@ const Cadastro = ({ theme }) => {
                     <Link to='/login' className='cad-btn'>Login</Link>
                 </div>
             </div>
+            <Modal 
+                isOpen={modalVisible} 
+                onClose={closeModal} 
+                title={modalTitle} 
+                message={modalMessage} 
+            />
         </div>
     );
 };
 
 export default Cadastro;
-
